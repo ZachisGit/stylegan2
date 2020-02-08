@@ -37,6 +37,7 @@ For press and other inquiries, please contact Hector Marinez at [hmarinez@nvidia
 * TensorFlow 1.14 or 1.15 with GPU support. The code does not support TensorFlow 2.0.
 * On Windows, you need to use TensorFlow 1.14 &mdash; TensorFlow 1.15 will not work.
 * One or more high-end NVIDIA GPUs, NVIDIA drivers, CUDA 10.0 toolkit and cuDNN 7.5. To reproduce the results reported in the paper, you need an NVIDIA GPU with at least 16 GB of DRAM.
+* (!!!IMPORTANT!!! replace the /usr/local/cuda/lib64/libcudnn.so.7 with the cuDNN 7.6 main file (libcudnn.so.7 => libcudnn.so.7.6))
 * Docker users: use the [provided Dockerfile](./Dockerfile) to build an image with the required library dependencies.
 
 StyleGAN2 relies on custom TensorFlow ops that are compiled on the fly using [NVCC](https://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/index.html). To test that your NVCC installation is working correctly, run:
